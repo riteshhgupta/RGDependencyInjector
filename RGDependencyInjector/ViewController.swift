@@ -11,6 +11,7 @@ import UIKit
 final class ViewController: UIViewController {
 
 	// dependent property which needs to be configured from outside
+	// it's nil right now and will crash if accessed before initalising
 	var items: [String]!
 
 	// local properties
@@ -22,7 +23,6 @@ final class ViewController: UIViewController {
 
 		// datasource expects `items` to be non-nil
 		datasource = ViewControllerDatasource(items: items)
-
 		tableView.dataSource = datasource
 		tableView.reloadData()
 	}
@@ -30,21 +30,20 @@ final class ViewController: UIViewController {
 
 extension ViewController: InjectableController {
 
-	// it lets you define a model which represents the dependency
-	typealias Dependency = ViewControllerDependency
+	// it lets you define a model which represents it's dependency
+	struct Dependency {
 
-	// these two are required to get a controller instance from a storyboard
+		let items: [String]
+		// let user: User
+		// let fruits: [Fruit]
+		// it can have anyting you want as dependency
+	}
+
+	// storyboardName is required to get a controller instance from this storyboard
 	static var storyboardName: String { return "Main" }
-	static var storyboardId: String { return "ViewController" }
 
 	// this is where you can hookup all the dependencies/bindings
-	func inject(_ dependency: ViewControllerDependency) {
+	func inject(_ dependency: Dependency) {
 		items = dependency.items
 	}
-}
-
-// model which represents ViewController's dependency
-struct ViewControllerDependency {
-
-	let items: [String]
 }

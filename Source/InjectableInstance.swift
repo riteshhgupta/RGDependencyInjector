@@ -12,7 +12,7 @@ import Foundation
 // `Injectable` is the base protocol which a class needs to implement
 // If you wish to make a custom injectable protocol like `InjectableController` then simply inherit `Injectable`
 
-public protocol Injectable: class {
+public protocol InjectableInstance: class {
 
 	// it represents a model which one wants to inject
 	associatedtype Dependency
@@ -24,7 +24,7 @@ public protocol Injectable: class {
 	func inject(_ dependency: Dependency)
 }
 
-public extension Injectable {
+public extension InjectableInstance {
 
 	// this is the api one should use to get injected instance
 	// e.g. let vc = FeedViewController.injectableInstance(feedDependency)

@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D32C40520E2323200201D38 /* DependencyReceivable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32C40420E2323200201D38 /* DependencyReceivable.swift */; };
+		3D32C40720E23A3600201D38 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32C40620E23A3600201D38 /* Helper.swift */; };
+		3D32C40B20E24A0000201D38 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32C40A20E24A0000201D38 /* Dependency.swift */; };
 		3D4C0B331FBAF1DD008434D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C0B321FBAF1DD008434D0 /* AppDelegate.swift */; };
 		3D4C0B351FBAF1DD008434D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C0B341FBAF1DD008434D0 /* ViewController.swift */; };
 		3D4C0B381FBAF1DD008434D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4C0B361FBAF1DD008434D0 /* Main.storyboard */; };
 		3D4C0B3A1FBAF1DD008434D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4C0B391FBAF1DD008434D0 /* Assets.xcassets */; };
 		3D4C0B3D1FBAF1DD008434D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4C0B3B1FBAF1DD008434D0 /* LaunchScreen.storyboard */; };
-		3D4C0B461FBAF257008434D0 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C0B451FBAF257008434D0 /* Injectable.swift */; };
+		3D4C0B461FBAF257008434D0 /* InjectableInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C0B451FBAF257008434D0 /* InjectableInstance.swift */; };
 		3D4C0B481FBAF27D008434D0 /* InjectableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C0B471FBAF27D008434D0 /* InjectableController.swift */; };
 		3D4C0B4A1FBAF662008434D0 /* ViewControllerDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C0B491FBAF662008434D0 /* ViewControllerDatasource.swift */; };
 		3D4C0B4C1FBAF685008434D0 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C0B4B1FBAF685008434D0 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D32C40420E2323200201D38 /* DependencyReceivable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyReceivable.swift; sourceTree = "<group>"; };
+		3D32C40620E23A3600201D38 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		3D32C40A20E24A0000201D38 /* Dependency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 		3D4C0B2F1FBAF1DD008434D0 /* RGDependencyInjector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGDependencyInjector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4C0B321FBAF1DD008434D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D4C0B341FBAF1DD008434D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,7 +32,7 @@
 		3D4C0B391FBAF1DD008434D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D4C0B3C1FBAF1DD008434D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D4C0B3E1FBAF1DD008434D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D4C0B451FBAF257008434D0 /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
+		3D4C0B451FBAF257008434D0 /* InjectableInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectableInstance.swift; sourceTree = "<group>"; };
 		3D4C0B471FBAF27D008434D0 /* InjectableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectableController.swift; sourceTree = "<group>"; };
 		3D4C0B491FBAF662008434D0 /* ViewControllerDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDatasource.swift; sourceTree = "<group>"; };
 		3D4C0B4B1FBAF685008434D0 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -78,8 +84,11 @@
 		3D4C0B441FBAF22A008434D0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				3D4C0B451FBAF257008434D0 /* Injectable.swift */,
+				3D4C0B451FBAF257008434D0 /* InjectableInstance.swift */,
 				3D4C0B471FBAF27D008434D0 /* InjectableController.swift */,
+				3D32C40420E2323200201D38 /* DependencyReceivable.swift */,
+				3D32C40A20E24A0000201D38 /* Dependency.swift */,
+				3D32C40620E23A3600201D38 /* Helper.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -111,7 +120,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Ritesh Gupta";
 				TargetAttributes = {
 					3D4C0B2E1FBAF1DD008434D0 = {
@@ -157,10 +166,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D4C0B351FBAF1DD008434D0 /* ViewController.swift in Sources */,
-				3D4C0B461FBAF257008434D0 /* Injectable.swift in Sources */,
+				3D4C0B461FBAF257008434D0 /* InjectableInstance.swift in Sources */,
 				3D4C0B481FBAF27D008434D0 /* InjectableController.swift in Sources */,
+				3D32C40B20E24A0000201D38 /* Dependency.swift in Sources */,
 				3D4C0B4C1FBAF685008434D0 /* TableViewCell.swift in Sources */,
 				3D4C0B331FBAF1DD008434D0 /* AppDelegate.swift in Sources */,
+				3D32C40720E23A3600201D38 /* Helper.swift in Sources */,
+				3D32C40520E2323200201D38 /* DependencyReceivable.swift in Sources */,
 				3D4C0B4A1FBAF662008434D0 /* ViewControllerDatasource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,6 +213,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -208,6 +221,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -258,6 +272,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -265,6 +280,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

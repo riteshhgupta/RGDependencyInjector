@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 		// create the dependency
 		let fruits = ["apple", "banana", "orange"]
-		let dependency = ViewControllerDependency(items: fruits)
+		let dependency = ViewController.Dependency(items: fruits)
 
 		// inject the above dependency into `injectableInstance(:)`
 		let controller = ViewController.injectableInstance(dependency: dependency)
